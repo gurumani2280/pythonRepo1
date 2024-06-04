@@ -1,0 +1,3 @@
+Q1:Take user input Age and display if user is eligible for voting or not
+Q2:Take user input a number and display it is even or odd
+Q3:Take 2 user input number and display the sum of Input number

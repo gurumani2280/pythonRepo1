@@ -1,0 +1,32 @@
+Day 1:
+Python is dynamically typed language that is based on value stored in the variable the data type
+is decided.
+type function will return the datatype of given variable
+some examples we covered str,int,float,bool
+print function used to print anything on the console
+input function is used to take input from console and it converts to string datatype
+
+Day 2:
+Bool function will convert Number to boolean
+For anything greater than or Less than 0 it will give True
+For 0 and 0.0 It will give False
+For empty string("", '',"""""") bool function will be false or else will be True)
+--
+For bool value Int conversion will either give 0(False) or 1(True)
+For Float Int conversion will remove the decimal part and integer part or Non decimal 
+part will be returned as part of int conversion
+For string Int func will check the content with in a string
+if the content is Int then Int function can able to convert to Int else throws error
+--
+for Boolean to float conversion will work 
+True - 1.0
+False-0.0
+for Int to float 
+for 5 it is 5.0
+for string if content is number it will work else throws error 
+"ValueError: could not convert string to float: 'abc'"
+--
+print(a//b)#0 without decimal value
+print(a**b)#exponential three times of 1
+--
+Everything can be converted to String
