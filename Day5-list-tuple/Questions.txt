@@ -1,0 +1,11 @@
+1-Write all the functions of list and tuple with their functionality
+2-Take user input as string and find out how many unique vowels
+3-Print the sum of all the numbers in the list
+4-Print the sum of all the numbers inside the mixed list
+5-Print the sum of all the even numbers in the list
+6-Print the sum of all the odd numbers in the list
+7-From the list of numbers create 2 seperate list consisting of even and odd numbers
+8-From the mixed list create three seperate list consisting only numbers,only string and only bool
+9-Write a program to ask user input till user wants and print count and print list of positive
+numbers,Negative and zeros entered by user.
+10-update value of list without using append function- we can use insert or x[0]=value

@@ -1,0 +1,10 @@
+x=[8,6,54]
+print(x)
+x.append(55)
+print(x)
+x.pop()
+print(x)
+x.pop(2)
+print(x)
+x.clear()
+print(x)
