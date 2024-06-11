@@ -1,0 +1,4 @@
+1-Remove duplicates from list without using set function
+2-Remove duplicates from string
+3-Take user input string and find out how many vowels are there in the input string
+4-Find out the frequency of each character of given input string
