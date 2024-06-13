@@ -1,0 +1,26 @@
+1-Write a function which takes three input number and returns average of all three
+2-Write a function to print all odd numbers from 1 to n(user input)
+3-Write a function which takes 2 input number and returns maximum of 2
+4-Write a function which takes 2 input number and returns minimum of 2
+5-Write a function to print all even numbers from 1 to n(user input)
+6-Write a function to find the circumference of a circle(take radius as input)
+7-Write a function to find the area of a circle(take radius as input)
+8-Write a function to find perimeter and area of triangle and rectangle
+9-Write a function to find person eligible for voting.
+10-Write a function to find exponent of 2 numbers
+11-Write a function to calculate GCD of 2 numbers
+12-Write a function to calculate LCM of 2 numbers
+13-Write a function to calculate factorial of given number
+14-write a function to find fibbonaci of nth number
+15-Write a function to print 1 to 10
+16-Write a function to print 10 to 1
+
+write a function for sum and it should take variable nth argument
+Ex: sum(1) output 1,sum(2,2) output 4,sum(2,3,4) output 9
+
+write a function for multiply and it should take variable nth argument
+Ex:Multiply(1) output 1,multiply(2,2) output 4,multiply(2,3,4) output 24
+
+Write a function which takes argument like person details-Name,address,city(Use keyword
+variable length argument)
+
