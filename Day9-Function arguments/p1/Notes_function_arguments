@@ -1,0 +1,9 @@
+# Arguments
+
+There are 5 types of actual arguments
+    1. positional arguments/required arguments
+    2. keyword arguments / named arguments
+    3. default arguments
+    4.variable length arguments(single *)
+    5.keyword variable length argument(** double star)
+    6-single * tuple and
