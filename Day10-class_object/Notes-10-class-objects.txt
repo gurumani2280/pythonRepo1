@@ -26,3 +26,6 @@ Inside a class, we can have 3 types of methods:
 1.Static Method - For all the static method, self or cls is not there.
 2.Class Method - For all the class method, cls should  be the first argument/parameter
 3.Instance Method - For all the instance method, self should be the first argument/parameter
+
+__init__() - This is a special method also known as Constructor
+init method will be executed automatically when ever we create object of that class
