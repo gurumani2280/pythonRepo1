@@ -1,0 +1,57 @@
+1-We can create multiple constructor in a class but the latest one or
+the last one will be considered
+----------------------------
+Python Inheritance:
+-Inheritance allows us to define a class that inherits all the methods
+and properties from another class.
+-Parent class is the class being inherited from, also called base class.
+-Child class is the class that inherits from another class, also called derived class.
+-----------------------------
+-The child's __init__() function overrides
+the inheritance of the parent's __init__() function.
+-To keep the inheritance of the parent's __init__() function,
+add a call to the parent's __init__() function
+using this - Person.__init__(self, fname, lname)
+or using this - Python also has a super() function that will make the child class inherit
+all the methods and properties from its parent
+super().__init__(fname, lname)
+-By using the super() function, you do not have to use the name of the parent element,
+ it will automatically inherit the methods and properties from its parent.
+ -If you add a method in the child class with the same name as a function in the parent class,
+ the inheritance of the parent method will be overridden.
+------------------------------------------------------------------
+Benefits of inheritance are:
+Inheritance allows you to inherit the properties of a class, i.e., base class to another, i.e., derived class. The benefits of Inheritance in Python are as follows:
+-It represents real-world relationships well.
+-It provides the reusability of a code. We don’t have to write the same code again and again. Also, it allows us to add more features to a class without modifying it.
+-It is transitive in nature, which means that if class B inherits from another class A, then all the subclasses of B would automatically inherit from class A.
+-Inheritance offers a simple, understandable model structure.
+-Less development and maintenance expenses result from an inheritance.
+--------------------------------
+What is an object class in Python?
+Like the Java Object class, in Python (from version 3. x),
+ the object is the root of all classes.
+In Python 3.x, “class Test(object)” and “class Test” are same.
+---------------------------------------
+Subclassing (Calling constructor of parent class)
+A child class needs to identify which class is its parent class. This can be done by mentioning the parent class name in the definition of the child class.
+Example: class subclass_name (superclass_name)
+----------------------------------
+In "Program8.py",
+It invokes the __init__() of the referred class.
+
+The variables defined within __init__() are called instance variables or objects.
+ Hence, ‘fname’ and ‘lname’ are the objects of the class Person.
+ Similarly, ‘graduationyear’ are the instance variable of the class Employee.
+ Since the class Employee inherits from class Person, ‘fname’ and ‘lname’ are
+  also the instance variable of class Employee.
+  -------------
+ In "program4.py",Python program to demonstrate error if we forget to invoke __init__() of the parent
+If you forget to invoke the __init__() of the parent class then its instance variables
+would not be available to the child class.
+Error:#AttributeError: 'Student' object has no attribute 'firstname'
+---------------
+The super() Function
+The super() function is a built-in function that returns the objects that represent
+ the parent class.
+ It allows to access the parent class’s methods and attributes in the child class.
