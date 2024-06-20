@@ -1,3 +1,5 @@
 pip install selenium
 
+PyCharm -> setting -> python interpreter
+
 or at project setting using + icon at selenium
