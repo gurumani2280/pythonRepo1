@@ -1,0 +1,8 @@
+how to handle multiple elements ?
+
+Using driver.find_elements() method : 
+-It returns list of web elements
+-We can iterate over those web elements using for loop and perform click or send_keys operation for each web element.
+-We can use condition also if element is enabled/disabled by using is_enabled()
+-We can display the presence of an element using is_displayed()
+-If radio/checkbox is checked/selected using is_selected()

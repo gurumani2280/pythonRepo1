@@ -1,0 +1,60 @@
+launching chrome browser?launching Edge browser?launching firefox browser?
+driver = webdriver.Chrome()
+driver = webdriver.Edge()
+driver = webdriver.Firefox()
+
+opening/launching any url e.g. google.com or facebook.com?
+driver.get("https://www.google.com")
+driver.get("https://www.facebook.com")
+
+navigating back, forward, page refresh? 
+driver.back()
+driver.forward()
+driver.refresh()
+
+what is type of WebDriver? what is type of web element?
+
+maximizing browser?minimizing browser?
+driver.maximize_window()
+driver.minimize_window()
+
+closing browser?
+driver.quit()
+driver.close()
+
+getting page title? getting current url url? getting page source?
+title = driver.title
+url = driver.current_url
+pagesource = driver.page_source
+
+
+identifiying element? list all locator in selenium?/or list eight methods of By class?
+'''there are 8 locators available inside selenium
+1. ID
+2.Name
+3. Linktext
+4.partiallinktext
+5.CSSselector
+6.xpath
+7.classname
+8.Tagname'''
+
+how to perform click() operation?how to enter any text to text field?
+username_element.send_keys("standard_user")
+driver.find_element(By.ID,"login-button").click()
+
+
+Every element does not have an id -­‐> static id, unique name,unique link text.
+For those elements we need to build xpath to find and then perform actions on them.
+Whatever we use to find an element, id, name, xpath, css -­‐> It should always be unique.
+It should only find one matching node unless we want to capture a list of elements.
+
+Additional:
+
+How to ensure if an element is enabled for interaction?
+-Using element.is_selected()
+How to ensure if an element is displayed in HTML?
+-Using element.is_displayed()
+How to ensure if a radio/checkbox is selected/checked in HTML?
+-Using element.is_selected()
+

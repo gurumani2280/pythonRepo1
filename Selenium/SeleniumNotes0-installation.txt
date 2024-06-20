@@ -1,0 +1,3 @@
+pip install selenium
+
+or at project setting using + icon at selenium

@@ -1,0 +1,74 @@
+general syntax xpath?--(relative xpath)
+//tagName[@attribute='attributeValue']				
+//tagName[text()='text']
+//tagName[contains(@attribute,'attributeValue')]	
+//tagName[contains(text(),'text')]
+e.g.
+
+//a vs //input vs //table
+//table/a   vs //table//a
+
+Difference between single ‘/’ or double ‘//’
+Don’t use “*”, always use the tag name instead.
+
+Using Starts-­‐With to find the elements:
+Syntax://tag[starts-­‐with(attribute,‘value’)]
+Finding Login link://div[@id='navbar']//a[starts-­‐with(@class,'navbar-­‐link')]
+
+Parent            Syntax: xpath-­‐to-­‐some-­‐element//parent::<tag>
+Preceding Sibling Syntax: xpath-­‐to-­‐some-­‐element//preceding-­‐sibling::<tag>
+Following Sibling Syntax: xpath-­‐to-­‐some-­‐element//following-­‐sibling::<tag>
+
+
+general ccs syntax?
+e.g.  tagName[attribute='attributeValue']
+
+Element Displayed Example Text Box:
+input[id=displayed-­‐text]
+#displayed-­‐text
+input#displayed-­‐text
+
+input[class=displayed-­‐class]
+.displayed-­‐class
+input.displayed-­‐class
+
+Appending Classes .class1.class2.class3 -­‐>Until we find a unique element
+
+Using wildcards in CSS Selectors:
+“^” -­‐> Represents the starting text
+“$” -­‐> Represents the ending text
+“*” -­‐> Represents the text contained
+Syntax: tag[attribute<specialcharacter>=’value’]
+Examples:
+input[class='inputs'] -­‐> Only 1 matching node
+input[class^='inputs']           -­‐> Two matching nodes
+input[class='displayed-­‐class']  -­‐ No matching nodes
+input[class$='class']            -­‐> One matching node
+input[class*='displayed-­‐class'] -­‐> One matching node
+
+Finding Children
+cssSelector -­‐>10 matching nodes
+cssSelector > table
+cssSelector > #product-­‐> One matching node
+cssSelector > button -­‐> One matching node
+cssSelector > a
+cssSelector > input#name
+
+difference between findElement and findElements?
+1. return type       --
+2. single matching   --
+3. Multiple Matching --
+4. No Matching       --
+
+
+
+
+functionalities of find element method:
+1. If locator is valid and if one matching element is there then , we wil get the web element corresponding to that
+2. if locator is invalid or zero matching element , then we get no such element exception
+3. If multiple matching locators , are there then it will give the first element
+
+functionalities of find elements method:
+1. if locator is valid and one matching is there then find elements will give web elements in the form of List
+2.if locator is invalid , then it will not give any exception , but length of the list will be zero
+3. if multiple matching locators then all the elements will be stored in the list
