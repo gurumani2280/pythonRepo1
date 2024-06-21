@@ -101,3 +101,11 @@ https://www.irctc.co.in/nget/train-search
 //img[contains(@src,'testing-logo-1.png')]
 
 
+<a href="/web/index.php/auth/logout" role="menuitem" class="oxd-userdropdown-link">Logout</a>
+tagname=a
+attributes=     href                        role           class
+value=     /web/index.php/auth/logout       menuitem      oxd-userdropdown-link
+visible text=Logout
+since this is a tag that is link,so visible text is also known as link text
+
+

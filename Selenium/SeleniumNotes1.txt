@@ -58,3 +58,6 @@ How to ensure if an element is displayed in HTML?
 How to ensure if a radio/checkbox is selected/checked in HTML?
 -Using element.is_selected()
 
+webdriver: Allows you to control a web browser.
+By: Provides strategies for locating elements on a web page.
+time: Provides functions to add delays or manage time in the script.

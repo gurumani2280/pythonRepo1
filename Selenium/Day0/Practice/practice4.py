@@ -1,0 +1,21 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+driver=webdriver.Chrome()
+driver.maximize_window()
+driver.get("https://opensource-demo.orangehrmlive.com")
+time.sleep(5)
+username=driver.find_element(By.NAME,"username")
+username.send_keys("Admin")
+time.sleep(3)
+password=driver.find_element(By.NAME,"password")
+password.send_keys("admin123")
+time.sleep(5)
+#driver.find_element(By.CLASS_NAME,"oxd-button--main").click()
+driver.find_element(By.CLASS_NAME,"oxd-button").click()
+time.sleep(5)
+driver.find_element(By.CLASS_NAME,"oxd-userdropdown-name").click()
+time.sleep(5)
+driver.find_element(By.PARTIAL_LINK_TEXT,"Logout").click()
+time.sleep(5)
+driver.quit()
