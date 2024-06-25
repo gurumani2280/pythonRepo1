@@ -1,0 +1,67 @@
+https://www.selenium.dev/selenium/docs/api/py/webdriver/selenium.webdriver.common.action_chains.html
+https://www.geeksforgeeks.org/action-chains-in-selenium-python/
+import time
+from selenium import webdriver
+# import Action chains
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()
+driver.maximize_window()
+driver.get("https://www.geeksforgeeks.org/")
+time.sleep(3)
+# get element
+element = driver.find_element(By.XPATH,"//span/div[text()='Courses']")
+# create action chain object
+action = ActionChains(driver)
+
+# put mouse on the web element
+action.move_to_element(element)
+
+# perform the operation
+action.perform()
+time.sleep(3)
+driver.quit()
+
+https://www.tutorialspoint.com/action-chains-in-selenium-python
+this has good example link for lot of methods
+
+https://www.tutorialspoint.com/how-can-i-perform-mouse-hover-action-in-selenium-python
+website to to mouse hover operation - https://the-internet.herokuapp.com/jqueryui/menu#
+
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()
+driver.implicitly_wait(5)
+#launch URL
+driver.get("https://the-internet.herokuapp.com/jqueryui/menu#")
+#object of ActionChains
+a = ActionChains(driver)
+#identify element
+m = driver.find_element(By.LINK_TEXT,"Enabled")
+#hover over element
+a.move_to_element(m).perform()
+#identify sub menu element
+n = driver.find_element(By.LINK_TEXT,"Back to JQuery UI")
+# hover over element and click
+# a.move_to_element(n).click().perform()
+# print("Page title: " + driver.title)
+
+
+n1 = driver.find_element(By.LINK_TEXT,"Downloads")
+# hover over element and click
+a.move_to_element(n1).perform()
+
+
+n2 = driver.find_element(By.LINK_TEXT,"PDF")
+# hover over element and click
+a.move_to_element(n2).click().perform()
+
+
+
+print("Page title: " + driver.title)
+#close browser
+driver.quit()
+

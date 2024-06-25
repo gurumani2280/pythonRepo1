@@ -1,0 +1,26 @@
+https://www.selenium.dev/selenium/docs/api/py/webdriver/selenium.webdriver.common.action_chains.html
+
+navigate to url - https://demo.guru99.com/test/simple_context_menu.html
+identify double click me button - //button[text()='Double-Click Me To See Alert']
+perform double click on the button, on alert will be generated --
+click ok on the alert
+
+
+navigate to url - https://demo.guru99.com/test/simple_context_menu.html
+identify right click me button - //span[text()='right click me']
+Click on copy button - //span[text()='Copy']
+perform right click on the button, on alert will be generated --
+click ok on the alert
+
+
+navigate to url="http://www.dhtmlgoodies.com/submitted-scripts/i-google-like-drag-drop/index.html";
+identify Block 1 and Block 3
+block 1 = //h1[normalize-space()='Block 1']
+block 3 = //h1[normalize-space()='Block 3']
+use action chains drag and drop method 
+
+
+search in google , how to set download location for python selenium
+
+
+
