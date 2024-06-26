@@ -22,5 +22,11 @@ use action chains drag and drop method
 
 search in google , how to set download location for python selenium
 
+navigate to this url https://www.tutorialspoint.com/index.htm
+identity About us - //h5[text()='About us']
+scroll down till to About us in the bottom of the page
+use move_to_element of Actionchains
+
+
 
 
