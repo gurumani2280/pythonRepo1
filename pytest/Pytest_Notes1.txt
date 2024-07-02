@@ -1,0 +1,73 @@
+https://docs.pytest.org/en/7.2.x/getting-started.html
+Installation 
+pip install pytest 
+pytest --version
+pip install pytest-html
+
+
+
+1. auto discovery of test file(module) , test clas , test function and test methods will happen
+	test file (module) should sart with test_*.py or end with *_test.py
+	test functions should start with test eg : testlogin()
+	test class name should start with Test eg: Testlogin 
+2. How to run pytest - 
+	use command=> pytest => it will run all the autodiscovered test
+		      pytest -s => it will run all the autodiscovered test and print output on console
+		      pytest -v => it will run all the autodiscovered test and provide more information 
+	quiet mode using -q - Execute the test function with “quiet” reporting mode: pytest -q test_sysexit.py
+		      pytest -v -s 
+
+3 How to a specific folder
+	eg : pytest NewDemo2/ -v -s
+3a. How to run a specific test file
+		pytest test_file.py
+		pytest test_sysexit.py
+4. how to run a specific class or funtion within a test file
+	pytest -v test_server.py::TestClass test_server.py::test_send_http
+
+https://docs.pytest.org/en/7.1.x/example/markers.html
+5. how to run test case with a specific method name pattern?
+   pytest -v -s -k "method name"
+   eg : pytest -v -s -k "login"
+   here it will run all the test functions/methods having "login" in their method/function name
+
+https://docs.pytest.org/en/7.1.x/example/markers.html
+6. creating marker is better way of doing the selective running 
+   eg: on top of function/method @pytest.mark.smoke - here smoke is a user defined marker
+   while running pytest -m "smoke"
+we can give multiple marker to a function 
+eg : 
+    @pytest.mark.login
+    @pytest.mark.smoke
+    def test_loginwithvalidusers(self):
+        print("Login with valid users")
+eg : we can run this by giving pytest -m "smoke and login" -v -s
+
+	pytest -m "smoke or login"
+	pytest -m "not smoke"
+	pytest -m "not login"
+
+8. How to regster marker
+	Registering markers for your test suite is simple:
+
+	# content of pytest.ini
+	[pytest]
+	markers =
+    		webtest: mark a test as a webtest.
+    		slow: mark test as slow.
+	
+	pytest --markers # The --markers option always gives you a list of available markers:
+
+7. how to use fixtures in pytest?
+use @pytest.fixture
+    def setup():
+       print("before method")
+       yield
+       print("after method")
+fixture name should be passed as an argument to the test method
+fixtures are used as a setup (before method) and tear down(after method) using yield keyword or statement
+before yield will be executed before test method and statements presebt after yield will be executed after test method is run
+
+instead of keeping fixture in a file , we can keep it inside a directory inside a file conftest.py so that it will be available to all the files inside
+that particulat directory
+eg : pytest NewDemo2/ -v -s

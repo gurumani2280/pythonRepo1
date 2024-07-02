@@ -1,0 +1,56 @@
+
+PyTest Fixture Scope Function, Class, Module, Package, Session 
+https://www.geeksforgeeks.org/what-is-the-difference-between-pythons-module-package-and-library/
+https://docs.pytest.org/en/7.1.x/how-to/fixtures.html
+Syntax: @pytest.fixture(scope="module")
+
+Types:,session,package,moduleclass ,function
+
+7. how to use fixtures in pytest?
+use @pytest.fixture
+    def setup():
+       print("before method")
+       yield
+       print("after method")
+fixture name should be passed as an argument to the test method
+fixtures are used as a setup (before method) and tear down(after method) using yield keyword or statement
+before yield will be executed before test method and statements present after yield will be executed after test method is run
+
+instead of keeping fixture in a file , we can keep it inside a directory inside a file conftest.py so that it will be available to all the files inside
+that particular directory
+  
+
+8 PyTest Testdata Parameter Passing Marker, Fixture Selenium Python Series
+Mark: https://docs.pytest.org/en/6.2.x/parametrize.html
+good example on websit - use it
+import pytest
+@pytest.mark.parametrize("test_input,expected", [("3+5", 8), ("2+4", 6), ("6*9", 42)])
+def test_eval(test_input, expected):
+    assert eval(test_input) == expected
+
+import pytest
+@pytest.mark.parametrize(
+    "test_input,expected",
+    [("3+5", 8), ("2+4", 6), pytest.param("6*9", 42, marks=pytest.mark.xfail)],
+)
+def test_eval(test_input, expected):
+    assert eval(test_input) == expected
+
+
+import pytest
+@pytest.mark.parametrize("x", [0, 1])
+@pytest.mark.parametrize("y", [2, 3])
+def test_foo(x, y):
+    pass
+
+Fixture: https://docs.pytest.org/en/7.1.x/how-to/fixtures.html#fixture-parametrize
+
+9. generating html report
+Library: https://pypi.org/project/pytest-html/
+pip install pytest-html
+
+Documentation: https://pytest-html.readthedocs.io/en/latest/user_guide.html#ansi-codes
+
+conftest.py
+def pytest_html_report_title(report):
+    report.title = "My very own title!"
