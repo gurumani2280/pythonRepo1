@@ -1,0 +1,43 @@
+using environment variable
+
+export BROWSER=chrome
+set BROWSER=chrome
+
+no space after variable name  not like set BROWSER = chrome, it creates another variable with space
+
+import os
+var_name =os.environ.get("BROWSER", "firefox")
+
+
+https://docs.pytest.org/en/7.1.x/example/simple.html
+
+# content of test_sample.py
+def test_answer(cmdopt):
+    if cmdopt == "type1":
+        print("first")
+    elif cmdopt == "type2":
+        print("second")
+    assert 0  # to see what was printed
+
+
+# content of conftest.py
+import pytest
+
+
+def pytest_addoption(parser):
+    parser.addoption(
+        "--cmdopt", action="store", default="type1", help="my option: type1 or type2"
+    )
+
+
+@pytest.fixture
+def cmdopt(request):
+    return request.config.getoption("--cmdopt")
+
+pytest -q test_sample.py
+
+pytest -q --cmdopt=type2
+
+we should be in the same package where we have the conftest.py file to run the method
+
+pytest -v -s --Browser=edge
