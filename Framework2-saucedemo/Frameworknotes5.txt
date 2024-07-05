@@ -1,0 +1,6 @@
+How to run from command prompt or using batch file
+call .venv\Scripts\activate.bat
+pytest -v -s -n=2 --Browser=chrome
+pause
+save these three lines in a text file and save as .bat extension
+double click and run the .bat file

@@ -1,0 +1,25 @@
+1.Create a package tests inside test package create 'conftest.py'
+@pytest.fixture(scope="class")
+def init(request):
+    driver = webdriver.Chrome()
+    driver.maximize_window()
+    driver.implicitly_wait(10)
+    driver.get("https://www.saucedemo.com/v1/")
+    request.cls.driver=driver
+    yield
+    driver.quit()
+Important Lines:
+1.@pytest.fixture(scope="class")
+2.request.cls.driver=driver
+3.yield
+
+2.Create a test python file and inside create test class and create test method
+@pytest.mark.usefixtures("init")
+class TestLogin:
+    def testlogindemo(self):
+        self.driver.find_element(By.NAME, "user-name").send_keys("standard_user")
+        self.driver.find_element(By.NAME, "password").send_keys("secret_sauce")
+        self.driver.find_element(By.ID, "login-button").click()
+Important Lines:
+1.@pytest.mark.usefixtures("init")
+2.using self before driver

@@ -1,0 +1,19 @@
+How to run framework from Jenkins
+-Install Java 21
+-Download jenkins
+-Open command prompt in the folder where jenkins.war file is there
+ java -jar jenkins.war
+-open the browser and type localhost:8080
+-for first time the initial admin password once user is created we can use admin,admin to login
+-Add job
+step1: Click on Add job
+Step2: Provide job name(Job1)
+Step3: click freestyle project and click enable ok button
+Step4: click on Advanced,checkbox custom work location and provide framework location
+Step5: Build task and execute batch job
+Step6: call .venv\Scripts\activate.bat
+             pytest -v -s -n=2 --Browser=chrome
+Step7: Apply and save
+Step8: buildnow to trigger
+Step9: configure to build peridically
+H/2 * * * *
